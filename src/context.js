@@ -88,10 +88,10 @@ class RoomProvider extends Component {
     } 
 
     filterRoom = () => {
-        let {rooms, type, price, minPrice, maxPrice, capacity,
+        let {rooms, type, price, capacity,
             minSize, maxSize, pets, breakfast} = this.state;
        
-        let tempRooms = [... rooms];
+        let tempRooms = [...rooms];
        
         capacity = parseInt(capacity);
         price = parseInt(price);

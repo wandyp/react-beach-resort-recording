@@ -5,7 +5,7 @@ import Title from './Title'
 
 export default function RoomFilter({rooms}) {
     const context = useContext(RoomContext);
-    const {handleChange, filter, type, price, minPrice, maxPrice, minSize
+    const {handleChange, type, price, minPrice, maxPrice, minSize
         , maxSize, capacity, breakfast, pets} = context;
     
     const getUnique = (items,value) => {
@@ -14,7 +14,7 @@ export default function RoomFilter({rooms}) {
     // Room Type Display
     let types = getUnique(rooms,'type');
     // add all
-    types = ['all',... types];
+    types = ['all',...types];
     // map to jsx
     types =  types.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
